@@ -1,0 +1,43 @@
+<!--<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div *ngIf=voiture>
+            <img [src]="imgUrll + voiture.photo" alt="" height="700px" width="700px" />
+
+            <h5 class="card-title">id :{{voiture.id}}</h5>
+            <p class="card-text">{{voiture.nom}}</p>
+            <p class="card-text">{{voiture.matricule}}</p>
+
+            <p class="card-text">{{voiture.photo}}</p>
+            <p class="card-text">{{voiture.couleur}}</p>
+            <p class="card-text">{{voiture.parking.nom}}</p>
+        </div>
+        <button class="btn btn-primary"(click)=retour()>back</button>
+    </div>-->
+
+        <section id="detail" class="bg-grey section-padding">
+    <div class="container">
+        <div class="section-content">
+            <div class="heading-section text-center">
+            
+                <h2 style="color: rgb(77, 7, 7); font-family:Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif; font-size:300%;" >    Détails de Voiture   </h2>
+            </div>
+            <div class="row mt-5">
+                <div   *ngIf=voiture  class="col-lg-5 col-md-6 align-self-center py-5">
+
+                    <div class="voiture-text">
+                       <p class="card-text" >id :{{voiture.id}}</p>
+                       <p class="card-text">{{voiture.nom}}</p>
+                       <p class="card-text">{{voiture.matricule}}</p>
+                       <p class="card-text">{{voiture.couleur}}</p>
+                       <p class="card-text">{{voiture.parking.nom}}</p>   
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                     <img [src]="imgUrll + voiture.photo" class="img-fluid shadow w-100" alt=" " height="700px" width="700px" />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+  

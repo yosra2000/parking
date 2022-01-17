@@ -1,0 +1,97 @@
+<form #f="ngForm" (ngSubmit)="AjouterVoiture(f)">
+  <div class="container">
+    <h1
+      style="
+        color: rgb(7, 86, 97);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      "
+    >
+      Ajouter Voiture
+    </h1>
+    <hr />
+    <label for="nom"><b>nom voiture</b></label>
+    <input
+      type="text"
+      placeholder="Entrer nom voiture"
+      name="nom"
+      id="nom"
+      ngModel
+      required
+      #nom="ngModel"
+      [(ngModel)]="voiture.nom"
+    />
+    <span style="color: red" *ngIf="!nom.valid && nom.touched">
+      Entrez le nom
+    </span>
+    <br />
+
+    <br />
+    <label for="matricule"><b> matricule </b></label>
+    <input
+      type="number"
+      placeholder="Entrer le matricule"
+      name="matricule"
+      id="matricule"
+      ngModel
+      required
+      #matricule="ngModel"
+      [(ngModel)]="voiture.matricule"
+    />
+
+    <br />
+    <label for="couleur"><b>couleur</b></label>
+    <input
+      type="text"
+      placeholder="enter couleur"
+      name="couleur"
+      id="couleur"
+      ngModel
+      required
+      #couleur="ngModel"
+      [(ngModel)]="voiture.couleur"
+    />
+
+    <br />
+    <label for="parking"><b>parking</b></label>
+    <select
+      [(ngModel)]="voiture.parking"
+      [compareWith]="compareFn"
+      ngModel
+      required
+      #parking="ngModel"
+      name="parking"
+      class="form-select"
+      aria-label="Default select example"
+    >
+      <option *ngFor="let p of Parkings" [ngValue]="p" selected>
+        {{ p.nom }}
+      </option>
+    </select>
+
+    <!-- <br>
+      
+      <input type="string" placeholder="enter photo" name="photo" id="photo" [(ngModel)]="voiture.photo">
+
+      -->
+
+    <div class="form-group">
+      <label>File Upload </label>
+      <input
+        type="file"
+        class="form-control"
+        autocomplete="off"
+        placeholder="Enter Image"
+        (change)="onChangeImage($event)"
+        name="imageFile"
+        accept="image/png,image/jpg"
+      />
+
+      <!-- <img [src]="imgURL" height="200" *ngIf="imgURL"> -->
+    </div>
+
+    <hr />
+    <button type="submit" class="registerbtn" [disabled]="!f.valid">
+      Ajouter
+    </button>
+  </div>
+</form>

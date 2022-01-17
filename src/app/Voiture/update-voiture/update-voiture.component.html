@@ -1,0 +1,36 @@
+
+  <form #f="ngForm" (ngSubmit)="ModifierVoiture(f)" *ngIf="voiture">
+    <div class="container">
+      <h1 style="color: brown; font-family:Georgia, 'Times New Roman', Times, serif ">Update Voiture </h1>
+     <hr>
+      <label for="nom"><b>nom voiture</b></label>
+      <input type="text" placeholder="Entrer nom voiture" name="nom" id="nom"  ngModel required #nom="ngModel" [(ngModel)]="voiture.nom"  >
+      <span style="color: red" *ngIf="!nom.valid && nom.touched"> Entrez le nom </span> <br> 
+
+      <br>
+      <label for="matricule"><b> matricule </b></label>
+      <input type="number" placeholder="Entrer le matricule" name="matricule" id="matricule"  ngModel required #matricule="ngModel" [(ngModel)]="voiture.matricule">
+      <span style="color: red" *ngIf="!matricule.valid && matricule.touched"> Entrez le matricule</span>      <br> 
+
+      <br>
+      <label for="couleur"><b>couleur</b></label>
+      <input type="text" placeholder="enter couleur" name="couleur" id="couleur"   ngModel required #couleur="ngModel"   [(ngModel)]="voiture.couleur">
+      <span style="color: red" *ngIf="!couleur.valid && couleur.touched"> Entrez le couleur</span> <br> 
+
+
+      <br>
+      <label for="parking"><b>parking</b></label>
+      <select   [compareWith]="compareFn"  [(ngModel)]="voiture.parking"    ngModel required #parking="ngModel"   name="parking" class="form-select" aria-label="Default select example">
+        <option   *ngFor="let p of Parkings"  [ngValue]="p" selected >{{p.nom}}</option>
+      </select>
+      <span style="color: red" *ngIf="!parking.valid && parking.touched"> Entrez le parking</span> <br> 
+
+
+      <hr>
+  
+      
+      <button type="submit" class="registerbtn" [disabled]="!f.valid " >Ajouter</button>
+    </div>
+  
+    
+  </form>

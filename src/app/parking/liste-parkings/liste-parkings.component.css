@@ -1,0 +1,8 @@
+.search{
+    margin: 40px;
+    width: 350px;
+    margin-left: 30%;
+    box-shadow: 14px 3px 71px -11px rgba(15,13,13,0.15);
+-webkit-box-shadow: 14px 3px 71px -11px rgba(15,13,13,0.15);
+-moz-box-shadow: 14px 3px 71px -11px rgba(15,13,13,0.15);
+}

@@ -1,0 +1,97 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+
+<div class="container">
+  <table Border="1" class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nom</th>
+        <th scope="col">couleur</th>
+        <th scope="col">matricule</th>
+        <th scope="col">photo</th>
+        <th scope="col">parking</th>
+        <th scope="col">Supprimer</th>
+        <th scope="col">Editer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of Voitures">
+        <td>
+          <a
+            routerLink="/details/{{ p.id }}"
+            class="text-dark text-decoration-none"
+          >
+            {{ p.id }}
+          </a>
+        </td>
+        <td>
+            <a
+            routerLink="/details/{{ p.id }}"
+            class="text-dark text-decoration-none"
+          >
+            {{ p.nom }}
+            </a>
+
+        </td>
+        <td>
+            <a
+            routerLink="/details/{{ p.id }}"
+            class="text-dark text-decoration-none"
+          >
+            {{ p.couleur }}
+        </a>
+        </td>
+        <td>
+            <a
+            routerLink="/details/{{ p.id }}"
+            class="text-dark text-decoration-none"
+          >
+            {{ p.matricule }}
+        </a>
+        </td>
+        <td>
+            <a
+            routerLink="/details/{{ p.id }}"
+            class="text-dark text-decoration-none"
+          >
+          <img [src]="imgUrll + p.photo" alt="" height="80px" width="90px" />
+          </a>
+        </td>
+        <td>{{ p.parking?.nom }}</td>
+        <td>
+          <button (click)="supprimer(p.id)" class="btn">
+            <i class="fa fa-trash" aria-hidden="true" style="color: brown"></i>
+          </button>
+        </td>
+        <td>
+          <a class="fa fa-edit" [routerLink]="['/Updatevoiture', p.id]"> </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--
+      <tr *ngFor="let p of ParkingsF" [ngStyle]="{color: getColor(p.nbVoiture)}">
+                <td><img src={{url+p.id}} width="50px" height="50px" *ngIf="att == 'masquer'"></td>
+                <td>{{p.id}}</td>
+                <td><a [routerLink]="[p.id]">{{p.name}}</a></td>
+                <td>{{p.Localisation}}</td>
+                <td>{{p.surface}}</td>
+                <td>{{p.nbVoiture}}</td>
+                <td>{{p.prix|currency:'TND':'symbol':'2.2-2'}}</td>
+                <td><button (click)="supprimer(p.id)"  class="btn" >
+                    <i class="fa fa-trash" aria-hidden="true"   style="color: brown"></i></button> 
+                </td>
+        <td>
+           <a  class="fa fa-edit" [routerLink]="['/updateProduit',p.id]"> </a>
+           </td>
+   
+
+                <td><button (click)="modifier(p.id)">  <a class="btn btn-danger" routerLink="/produitDetail">
+                        <i class="fa fa-trash-o fa-lg"></i> editer</a> </button></td>
+               
+            </tr> -->

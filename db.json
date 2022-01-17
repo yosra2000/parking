@@ -1,0 +1,133 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "sigup": [
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "yosramahjoub1925@gmail.com",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "fullName": "imprimante",
+      "mobile": 25046935,
+      "email": "yousramahjoub@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "yousramahjoub@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 3
+    },
+    {
+      "fullName": "rrrrrrrrrrrrrrr",
+      "mobile": 25046935,
+      "email": "mahjoub@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 4
+    },
+    {
+      "fullName": "imprimante",
+      "mobile": 25046935,
+      "email": "mahjoub@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 5
+    },
+    {
+      "fullName": "malek sghaier",
+      "mobile": 256669635,
+      "email": "malekb@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 6
+    },
+    {
+      "fullName": "khaled",
+      "mobile": 25046935,
+      "email": "khaled@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 7
+    },
+    {
+      "fullName": "",
+      "mobile": "",
+      "email": "khaled@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 8
+    },
+    {
+      "fullName": "ahmed",
+      "mobile": 250698,
+      "email": "ahmed@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 9
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25076935,
+      "email": "Yosra@isitc.u-sousse.tn",
+      "password": "yosra123456789",
+      "id": 10
+    },
+    {
+      "fullName": "selma Mahjoub",
+      "mobile": 25069354,
+      "email": "salma@isitc.u-sousse.tn",
+      "password": "yosra123456789",
+      "id": 11
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "Yosra@isitc.u-sousse.tn",
+      "password": "yosra123456789*",
+      "id": 12
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "yosra@isitc.u-sousse.tn",
+      "password": "yosra123456789",
+      "id": 13
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "MahjoubYosra@isitc.u-sousse.tn",
+      "password": "987654321",
+      "id": 14
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "MhjYosra@isitc.u-sousse.tn",
+      "password": "987654321*",
+      "id": 15
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "yosraMHJ123@isitc.u-sousse.tn",
+      "password": "98765432111",
+      "id": 16
+    },
+    {
+      "fullName": "yosra mahjoub",
+      "mobile": 25046935,
+      "email": "yosraMhj1236@isitc.u-sousse.tn",
+      "password": "123456789",
+      "id": 17
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

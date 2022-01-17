@@ -1,0 +1,32 @@
+<form #f="ngForm" (ngSubmit)="AjouterParking(f)" >
+    <div class="container">
+      <h1 style="color: rgb(85, 42, 165); font-family:Georgia, 'Times New Roman', Times, serif ">Ajouter Parking</h1>
+     <hr>
+  
+      <label for="nom"><b>nom Parking</b></label>
+      <input type="text" placeholder="Entrer nom parking" name="nom" id="nom" ngModel required #nom="ngModel"  >
+      <span style="color: red" *ngIf="!nom.valid && nom.touched"> Entrez le nom </span>      <br> 
+      <br>
+      <label for="localisation"><b>localisation Parking</b></label>
+      <input type="text" placeholder="Entrer localisation Parking" name="localisation" id="localisation" ngModel required #localisation="ngModel"  >
+      <span style="color: red" *ngIf="!localisation.valid && localisation.touched"> Entrez localisation </span>      <br> 
+      <br>
+      
+
+      <label for="prix"><b>Prix</b></label>
+      <input type="number" placeholder="Entrer le prix" name="prix" id="prix" ngModel required #prix="ngModel">
+      <span style="color: red" *ngIf="!prix.valid && prix.touched "> Entrer le prix</span>
+
+      <br>
+      <label for="surface"><b>surface</b></label>
+      <input type="number" placeholder="enter surface" name="surface" id="surface" ngModel required #surface="ngModel">
+      <span style="color: red" *ngIf="!surface.valid && surface.touched "> Entrer la quantite</span>
+
+      <hr>
+  
+      
+      <button type="submit" class="registerbtn" [disabled]="!f.valid " >Ajouter</button>
+    </div>
+  
+    
+  </form>
